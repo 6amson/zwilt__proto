@@ -24,22 +24,11 @@ export default function Hero() {
         if (!isSmallScreen) {
             if (elementRef.current) {
                 if (isAtFirstPosition) {
-                    elementRef.current.style.transform = 'translateX(220px)';
+                    elementRef.current.style.transform = `translateX(220px)`;
                 } else {
                     elementRef.current.style.transform = 'translateX(0)';
                 }
                 setIsAtFirstPosition(!isAtFirstPosition);
-            }
-        }
-    };
-
-
-    const handleToggle2 = () => {
-        if (elementRef.current) {
-            if (isAtFirstPosition) {
-                elementRef.current.style.transform = ` translateX(180px)`;
-            } else {
-                elementRef.current.style.transform = 'translateX(0)';
             }
         }
     };
@@ -50,11 +39,11 @@ export default function Hero() {
 
     const handleStackClick = (stack) => {
         setSelectedStack(stack === selectedStack ? null : stack);
-        if (isSmallScreen) {
-            handleToggle2();
-        } else {
+        // if (isSmallScreen) {
+            // handleToggle2();
+        // } else {
             handleToggle();
-        }
+        // }
     };
     const stackChoice = [{
         stack: 'IT & Development', options: ['Python Developer', 'Shopify Developer', 'MERN Devloper', 'Full stack developer', 'Data Scientist', 'Front End Developer', 'Shopify Developer', 'Ruby on rails', 'Python Developer', 'Shopify Developer', 'MERN Devloper',]
@@ -90,7 +79,7 @@ export default function Hero() {
                                 key={index}
                                 className={`stack-name ${selectedStack === item.stack ? 'selected' : ''}`}
                                 onClick={() => handleStackClick(item.stack)}
-                                style={{ cursor: 'pointer', fontWeight: selectedStack === item.stack ? 600 : '', }}
+                                style={{ cursor: 'pointer', fontWeight: selectedStack === item.stack ? 600 : '', color: selectedStack === item.stack && isSmallScreen? '#FFBE2E' : 'black' }}
                             >
                                 {item.stack}
                             </div>

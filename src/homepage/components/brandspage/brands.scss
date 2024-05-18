@@ -27,6 +27,8 @@
             display: grid;
             grid-template-columns: 380px 730px;
             align-items: center;
+            gap: 24px;
+
 
             .brands--container1 {
                 .brands--container1--texta {
@@ -133,6 +135,16 @@
 }
 
 
+@media(max-width: 1232px) {
+    .brandspage--container {
+        .brandspage--subcontainer {
+
+            .brands--container {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
 
 
 @media(max-width: 930px) {

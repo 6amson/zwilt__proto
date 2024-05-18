@@ -260,10 +260,11 @@
                     .selector {
                         transition: transform 0.3s ease;
                         position: absolute;
-                        background: #C7F4C2;
+                        background: #4e9e45;
                         width: 150px;
                         height: 100%;
                         z-index: 1;
+                        display: none;
                     }
                 }
 

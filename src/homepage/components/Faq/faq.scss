@@ -114,7 +114,7 @@
 
 @media (max-width: 1130px) {
     .faq--container {
-        padding: 50px 16px;
+        padding: 50px 0;
         padding-bottom: 180px;
         background: #F3F3F3;
 
@@ -136,7 +136,7 @@
                     align-items: center;
                     position: relative;
                     flex-direction: column;
-                    height: 68px;
+                    height: 88px;
 
 
 
@@ -170,7 +170,7 @@
                         width: 100%;
                         transition: background .3s ease;
                         position: relative;
-                        padding: 0 16px;
+                        padding: 0 18px 0 16px;
                         border: solid 1px #e8e8e8;
 
 
@@ -207,11 +207,12 @@
                             width: 100%;
                             right: 0;
                             display: flex;
+                            align-self: flex-start;
                         }
 
                         .pointer--div {
                             position: absolute;
-                            right: 32px;
+                            right: 24px;
                             opacity: 0;
                             transition: opacity .3 ease;
                         }
